@@ -27,11 +27,13 @@ int main()
 
     cin >> oceanLevelAnnualRise;
 
+    // The statement below ensures that the value will be positive, in case the user inadvertently enters a negative number.
     if (oceanLevelAnnualRise <= 0) {
         oceanLevelAnnualRise = abs(oceanLevelAnnualRise);
         cout << "The ocean only rises!  ";
 
     }
+    // The statement below makes sure the output is gramatically correct for a single millimeter.
     if (oceanLevelAnnualRise == 1) {
         cout << "The ocean will rise " << oceanLevelAnnualRise << " millimeter each year.\n\n";
     }
