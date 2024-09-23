@@ -21,10 +21,26 @@ using namespace std;
 
 int main()
 {
-    const double OCEAN_LEVEL_ANNUAL_RISE = 1.5;
-    double levelYear5 = OCEAN_LEVEL_ANNUAL_RISE * 5;
-    double levelYear7 = OCEAN_LEVEL_ANNUAL_RISE * 7;
-    double levelYear10 = OCEAN_LEVEL_ANNUAL_RISE * 10;
+    cout << "Please enter the level the ocean will rise in millimeters each year.\n";
+
+    double oceanLevelAnnualRise;
+
+    cin >> oceanLevelAnnualRise;
+
+    if (oceanLevelAnnualRise <= 0) {
+        oceanLevelAnnualRise = abs(oceanLevelAnnualRise);
+        cout << "The ocean only rises!  ";
+
+    }
+    if (oceanLevelAnnualRise == 1) {
+        cout << "The ocean will rise " << oceanLevelAnnualRise << " millimeter each year.\n\n";
+    }
+    else cout << "The ocean will rise " << oceanLevelAnnualRise << " millimeters each year.\n\n";
+
+    double levelYear5 = oceanLevelAnnualRise * 5;
+    double levelYear7 = oceanLevelAnnualRise * 7;
+    double levelYear10 = oceanLevelAnnualRise * 10;
+
 
     cout << "The ocean's level will be " << levelYear5 << " millimeters higher than the current level in 5 years.\n";
     cout << "In 7 years, it will be " << levelYear7 << " millimeters higher than the current level.\n";
